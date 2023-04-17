@@ -103,16 +103,16 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"**⌔︙ اهلا وسهلا اخوي  {mention} **\
+            start_msg = f"**⌔︙ اهلا وسهلا حب  {mention} **\
                         \n**⌔︙ {my_mention}'انا البوت المساعد .**\
                         \n**⌔︙ يمكنك التواصل مع صاحب البوت فقط ارسل رسالتك 👤.**\
-                        \n\n**⌔︙ البوت خاص بسورس :** [TELETHON FOR ARABS](t.me/iqthon)"
+                        \n\n**⌔︙ البوت خاص بسورس :** [TELETHON FOR GMHORAH](t.me/cdctop)"
         buttons = [
             (
-                Button.url("تنصيب سورسنا", "t.me/iqthon"),
+                Button.url("تنصيب سورسنا", "t.me/CCDCTOP"),
                 Button.url(
                     "قناه المساعد",
-                    "https://t.me/E999G",
+                    "https://t.me/CCXCTOP",
                 ),
             )
         ]
@@ -139,7 +139,7 @@ async def bot_start(event):
         await check_bot_started_users(chat, event)
 
 
-@iqthon.bot_cmd(incoming=True, func=lambda e: e.is_private)
+@HeaThon.bot_cmd(incoming=True, func=lambda e: e.is_private)
 async def bot_pms(event):  # sourcery no-metrics
     chat = await event.get_chat()
     if check_is_black_list(chat.id):
@@ -407,7 +407,7 @@ async def send_flood_alert(user_) -> None:
         FloodConfig.ALERT[user_.id]["fa_id"] = fa_msg.id
 
 
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(b"bot_pm_ban_([0-9]+)")))
+@HeaThon.tgbot.on(CallbackQuery(data=re.compile(b"bot_pm_ban_([0-9]+)")))
 @check_owner
 async def bot_pm_ban_cb(c_q: CallbackQuery):
     user_id = int(c_q.pattern_match.group(1))
@@ -459,8 +459,8 @@ async def settings_toggle(c_q: CallbackQuery):
     await c_q.edit("BOT_ANTIFLOOD is now disabled !")
 
 
-@iqthon.bot_cmd(incoming=True, func=lambda e: e.is_private)
-@iqthon.bot_cmd(edited=True, func=lambda e: e.is_private)
+@cdctop.bot_cmd(incoming=True, func=lambda e: e.is_private)
+@cdctop.bot_cmd(edited=True, func=lambda e: e.is_private)
 async def antif_on_msg(event):
     if gvarstatus("bot_antif") is None:
         return
