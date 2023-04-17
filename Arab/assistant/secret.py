@@ -10,7 +10,7 @@ from Arab import iqthon
 @HeaThon.tgbot.on(CallbackQuery(data=re.compile(b"secret_(.*)")))
 async def on_plug_in_callback_query_handler(event):
     timestamp = int(event.pattern_match.group(1).decode("UTF-8"))
-    if os.path.exists("./iqthon/secrets.txt"):
+    if os.path.exists("./Heathon/secrets.txt"):
         jsondata = json.load(open("./HeaThon/secrets.txt"))
         try:
             message = jsondata[f"{timestamp}"]
