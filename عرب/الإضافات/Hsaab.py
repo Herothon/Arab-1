@@ -95,7 +95,7 @@ PP_TOO_SMOL = "**🝳 ⦙  هذه الصورة صغيرة جدًا قم بإخت
 PP_ERROR = "**🝳 ⦙  حدث خطأ أثناء معالجة الصورة  ⚠️**"
 BIO_SUCCESS = "**🝳 ⦙  تم تغيير بايو حسابك بنجاح  ✅**"
 
-iqthonfont = gvarstatus("DEFAULT_PIC") or "Arab/sql_helper/IQTHONIMOGE.ttf"
+iqthonfont = gvarstatus("DEFAULT_PIC") or "Arab/HeaThon/cdctop.ttf"
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 autopic_path = os.path.join(os.getcwd(), "Arab", "original_pic.png")
 digitalpic_path = os.path.join(os.getcwd(), "Arab", "digital_pic.png")
@@ -119,7 +119,7 @@ DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 
-digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/6629cc2f43156292340a5.jpg")
+digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/d85f9e2d344d9e086ec52.jpg")
 
 
 async def digitalpicloop():
