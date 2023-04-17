@@ -1685,10 +1685,10 @@ async def iq(event):
 (.ص93) ⦙  هو
 (.ص94) ⦙  ههاي الافكار حطها
   ———————×———————
-شرح الأوامر : ( @L3LL3 ) .
-قناه السورس : ( @IQTHON ) .
+شرح الأوامر : ( @CFCTOP ) .
+قناه السورس : ( @CDCTOP ) .
 جميع الاوامر تكون بدايتها نقطة .""")
-@iqthon.on(admin_cmd(pattern="م8(?: |$)(.*)"))    
+@cdctop.on(admin_cmd(pattern="م8(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """**⦑    الاوامر المتحركه للتسلية   ⦒  :**
