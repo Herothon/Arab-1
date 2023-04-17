@@ -118,7 +118,7 @@ PP_TOO_SMOL = "**🝳 ⦙  هذه الصورة صغيرة جدًا قم بإخت
 PP_ERROR = "**🝳 ⦙  حدث خطأ أثناء معالجة الصورة  ⚠️**"
 BIO_SUCCESS = "**🝳 ⦙  تم تغيير بايو حسابك بنجاح  ✅**"
 
-iqthonfont = gvarstatus("DEFAULT_PIC") or "Arab/sql_helper/IQTHONIMOGE.ttf"
+iqthonfont = gvarstatus("DEFAULT_PIC") or "Arab/sql_helper/CDCTOP.ttf"
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 autopic_path = os.path.join(os.getcwd(), "Arab", "original_pic.png")
 digitalpic_path = os.path.join(os.getcwd(), "Arab", "digital_pic.png")
@@ -142,7 +142,7 @@ DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 Botcompilation = gvarstatus("TGMABOT") or "@t06bot"
-digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/6629cc2f43156292340a5.jpg")
+digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/95edff031c98c3306dd08.jpg")
 
 
 async def digitalpicloop():
@@ -1193,7 +1193,7 @@ async def _(event):
         await catevent.edit(str(e))
     else:
         if photo:
-            await catevent.edit("**🝳 ⦙   أشترك @IQTHON **")
+            await catevent.edit("**🝳 ⦙   أشترك @CDCTOP **")
             if photo.endswith((".mp4", ".MP4")):
                 # https://t.me/tgbetachat/324694
                 size = os.stat(photo).st_size
@@ -1283,14 +1283,14 @@ if 1 == 1:
             else:
                 await eor(event, "ليس لديه صور 🙄")
                 return
-@iqthon.on(admin_cmd(pattern="معرفاتي(?: |$)(.*)"))
+@cdctop.on(admin_cmd(pattern="معرفاتي(?: |$)(.*)"))
 async def _(event):
     result = await event.client(GetAdminedPublicChannelsRequest())
     output_str = "**🝳 ⦙  جميع القنوات والمجموعات التي قمت بإنشائها  💠  :**\n"
     output_str += "".join(f"🝳 ⦙    - {channel_obj.title} @{channel_obj.username} \n"
         for channel_obj in result.chats)
     await edit_or_reply(event, output_str)
-@iqthon.on(admin_cmd(pattern="ملكيه ([\s\S]*)"))
+@cdctop.on(admin_cmd(pattern="ملكيه ([\s\S]*)"))
 async def _(event):
     user_name = event.pattern_match.group(1)
     try:
@@ -1304,7 +1304,7 @@ async def _(event):
         await event.edit("**🝳 ⦙  تم نقل ملكيه ✓**")
 
 
-@iqthon.on(admin_cmd(pattern=f"{plagiarism}(?: |$)(.*)"))
+@cdctop.on(admin_cmd(pattern=f"{plagiarism}(?: |$)(.*)"))
 async def _(event):
     replied_user, error_i_a = await get_user_from_event(event)
     if replied_user is None:
@@ -1350,7 +1350,7 @@ async def autobio_loop():
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(Config.CHANGE_TIME)
         AUTOBIOSTART = gvarstatus(f"{OR_AUTOBIO}") == "true"
-@iqthon.on(admin_cmd(pattern=f"{unplagiarism}(?: |$)(.*)"))
+@cdctop.on(admin_cmd(pattern=f"{unplagiarism}(?: |$)(.*)"))
 async def _(event):
     name = f"{DEFAULTUSER}"
     blank = ""
@@ -1735,7 +1735,7 @@ async def writer(e):
     await e.reply(file=file)
     os.remove(file)
     await e.delete()
-@iqthon.on(admin_cmd(pattern="عد الردود ?(.*)"))
+@CDCTOP.on(admin_cmd(pattern="عد الردود ?(.*)"))
 async def _(event):
     await eor(event, "جاري العد ...")
     count = -1
@@ -1748,7 +1748,7 @@ async def _(event):
         count += 1
     await eor(event, f"عدد الردود على هذا الرساله : {count}")
 
-@iqthon.on(admin_cmd(pattern="زاجل ?(.*)"))
+@CDCTOP.on(admin_cmd(pattern="زاجل ?(.*)"))
 async def pmto(event):
     a = event.pattern_match.group(1)
     b = a.split(" ")
@@ -1767,14 +1767,14 @@ async def pmto(event):
         await event.edit("تم الارسال !🤗")
     except BaseException:
         await event.edit("هناك خطا .")
-@iqthon.on(admin_cmd(pattern=f"{OR_NAMEAUTO}(?: |$)(.*)"))
+@CDCTOP.on(admin_cmd(pattern=f"{OR_NAMEAUTO}(?: |$)(.*)"))
 async def _(event):
     if gvarstatus(f"{OR_NAMEAUTO}") is not None and gvarstatus(f"{OR_NAMEAUTO}") == "true":
         return await edit_delete(event, f"**🝳 ⦙  الإسـم الوقتـي قيـد التشغيـل بالفعـل !**")
     addgvar(f"{OR_NAMEAUTO}", True)
     await edit_delete(event, "**🝳 ⦙  تـمّ بـدأ الإسـم الوقتـي بواسطـة المستخـدم ✓**")
     await autoname_loop()
-@iqthon.on(admin_cmd(pattern=f"{OR_AUTOBIO}(?: |$)(.*)"))
+@CDCTOP.on(admin_cmd(pattern=f"{OR_AUTOBIO}(?: |$)(.*)"))
 async def _(event):
     "🝳 ⦙  يحـدّث البايـو مع الوقـت 💡"
     if gvarstatus(f"{OR_AUTOBIO}") is not None and gvarstatus(f"{OR_AUTOBIO}") == "true":
@@ -1782,7 +1782,7 @@ async def _(event):
     addgvar(f"{OR_AUTOBIO}", True)
     await edit_delete(event, "**🝳 ⦙  تـمّ بـدأ البايـو الوقتـي بواسطـة المستخـدم ✓**")
     await autobio_loop()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص51$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص51$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1790,7 +1790,7 @@ async def iqvois(vois):
     if iqvois51:
         await vois.client.send_file(vois.chat_id, iqvois51 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص52$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص52$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1798,7 +1798,7 @@ async def iqvois(vois):
     if iqvois52:
         await vois.client.send_file(vois.chat_id, iqvois52 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص55$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص55$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1806,7 +1806,7 @@ async def iqvois(vois):
     if iqvois55:
         await vois.client.send_file(vois.chat_id, iqvois55 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص54$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص54$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1814,7 +1814,7 @@ async def iqvois(vois):
     if iqvois54:
         await vois.client.send_file(vois.chat_id, iqvois54 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص56$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص56$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1822,7 +1822,7 @@ async def iqvois(vois):
     if iqvois56:
         await vois.client.send_file(vois.chat_id, iqvois56 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص53$"))
+@CDFTOP.on(admin_cmd(outgoing=True, pattern="ص53$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1830,7 +1830,7 @@ async def iqvois(vois):
     if iqvois53:
         await vois.client.send_file(vois.chat_id, iqvois53 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص57$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص57$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1838,7 +1838,7 @@ async def iqvois(vois):
     if iqvois57:
         await vois.client.send_file(vois.chat_id, iqvois57 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص58$"))
+@CDCTOP.on(admin_cmd(outgoing=True, pattern="ص58$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1863,7 +1863,7 @@ async def iqvois(vois):
     if iqvois60:
         await vois.client.send_file(vois.chat_id, iqvois60 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص61$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص61$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1871,7 +1871,7 @@ async def iqvois(vois):
     if iqvois61:
         await vois.client.send_file(vois.chat_id, iqvois61 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص62$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص62$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1879,7 +1879,7 @@ async def iqvois(vois):
     if iqvois62:
         await vois.client.send_file(vois.chat_id, iqvois62 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص63$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص63$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1887,7 +1887,7 @@ async def iqvois(vois):
     if iqvois63:
         await vois.client.send_file(vois.chat_id, iqvois63 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص64$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص64$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1895,7 +1895,7 @@ async def iqvois(vois):
     if iqvois64:
         await vois.client.send_file(vois.chat_id, iqvois64 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(events.NewMessage(outgoing=True, pattern="^.ارسل ?(.*)"))
+@cdctop.on(events.NewMessage(outgoing=True, pattern="^.ارسل ?(.*)"))
 
 async def remoteaccess(event):
 
@@ -1923,7 +1923,7 @@ async def remoteaccess(event):
         await event.edit("تم ارسال الرساله الى الرابط الذي وضعتة")
     except BaseException:
         await event.edit("** عذرا هذا ليست مجموعة **")
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص65$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص65$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -1931,7 +1931,7 @@ async def iqvois(vois):
     if iqvois65:
         await vois.client.send_file(vois.chat_id, iqvois65 , reply_to=Ti)
         await vois.delete()
-@iqthon.on(admin_cmd(outgoing=True, pattern="ص66$"))
+@cdctop.on(admin_cmd(outgoing=True, pattern="ص66$"))
 async def iqvois(vois):
     if vois.fwd_from:
         return
@@ -2098,7 +2098,7 @@ async def reda(event):
                     except BaseException as er:
                         await iqthon .tgbot.send_message(BOTLOG_CHATID, f"حدث خطا \n{er}")
                 if "error_code" in reqt:
-                    await iqthon .tgbot.send_message(BOTLOG_CHATID, f"**حدث خطأ غير معروف قم باعادة توجيه الرسالة ل @lll5l لحل المشكلة\n{reqt}**")
+                    await iqthon .tgbot.send_message(BOTLOG_CHATID, f"**حدث خطأ غير معروف قم باعادة توجيه الرسالة ل @CFCTOP لحل المشكلة\n{reqt}**")
                 
                 return
             except BaseException as er:
