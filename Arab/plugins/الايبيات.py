@@ -87,7 +87,7 @@ telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
-FONT_FILE_TO_USE = "iqthon/helpers/styles/impact.ttf"
+FONT_FILE_TO_USE = "Heathon/helpers/styles/impact.ttf"
 
 #Telethon IQ
 async def get_tz(con):
