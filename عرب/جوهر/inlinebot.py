@@ -20,7 +20,7 @@ from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
 LOGS = logging.getLogger(__name__)
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
-CATLOGO = "https://telegra.ph/file/1bf9c1b0a084c258b1f97.jpg"
+CATLOGO = "https://telegra.ph/file/95edff031c98c3306dd08.jpg"
 tr = Config.COMMAND_HAND_LER
 def getkey(val):
     for key, value in GRP_INFO.items():
@@ -51,7 +51,7 @@ async def inline_handler(event):
     if query_user_id == Config.OWNER_ID or query_user_id in Config.SUDO_USERS:
         hmm = re.compile("همسه (.*) (.*)")
         match = re.findall(hmm, query)
-        if query.startswith("**iqthonbot"):
+        if query.startswith("**HeaThonbot"):
             buttons = [
                 (
                     Button.inline("السورس", data="stats"),
@@ -300,7 +300,7 @@ async def inline_handler(event):
     else:
         buttons = [
             (
-                Button.url("Source code", "https://github.com/telethontesthelp/Telethon-arabb"),
+                Button.url("Source code", "https://github.com/HeaThon/Arab"),
                 Button.url(
                     "Deploy",
                     "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
@@ -319,7 +319,7 @@ async def inline_handler(event):
             type="photo",
             title="iqthon",
             description="نصب لنفسك",
-            url="https://dashboard.heroku.com/new?template=https://github.com/telethon-Arab/teletho-help",
+            url="https://dashboard.heroku.com/new?template=https://github.com/HeaThon/T",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
@@ -327,14 +327,14 @@ async def inline_handler(event):
             ),
         )
         await event.answer([result] if result else None)
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(b"close")))
+@HeaThon.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
         (Button.inline("Open Menu", data="mainmenu"),),
     ]
     await event.edit("Menu Closed", buttons=buttons)
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
+@HeaThon.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     _result = main_menu()
