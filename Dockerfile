@@ -1,6 +1,6 @@
-FROM telethonArab/Arab:slim-buster
+FROM HeaThon/Arab:slim-buster
 
-RUN git clone https://github.com/telethonArab/Arab.git /root/Arab
+RUN git clone https://github.com/HeaThon/Arab.git /root/Arab
 
 WORKDIR /root/Arab
 
