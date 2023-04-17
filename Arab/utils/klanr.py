@@ -20,7 +20,7 @@ def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        path = Path(f"iqthon/plugins/{shortname}.py")
+        path = Path(f"Heathon/plugins/{shortname}.py")
         checkplugins(path)
         name = "iqthon.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
@@ -29,7 +29,7 @@ def load_module(shortname, plugin_path=None):
         LOGS.info(f"[تم تحميل : {shortname}]\n")
     else:
         if plugin_path is None:
-            path = Path(f"iqthon/plugins/{shortname}.py")
+            path = Path(f"Heathon/plugins/{shortname}.py")
             name = f"iqthon.plugins.{shortname}"
         else:
             path = Path((f"{plugin_path}/{shortname}.py"))
