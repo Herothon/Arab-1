@@ -435,7 +435,7 @@ async def memes(mafia):
             os.remove(files)
 
 
-@iqthon.on(admin_cmd(outgoing=True, pattern="فلتر رصاصي$"))
+@HeaThon.on(admin_cmd(outgoing=True, pattern="فلتر رصاصي$"))
 async def memes(mafia):
     reply = await mafia.get_reply_message()
     if not (reply and (reply.media)):
@@ -502,7 +502,7 @@ async def memes(mafia):
     for files in (mafiasticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
-@iqthon.on(events.NewMessage(outgoing=True, pattern='.فك المحظورين'))
+@HeaThon.on(events.NewMessage(outgoing=True, pattern='.فك المحظورين'))
 async def UnBlockList(event):
 
     # GET BLOCKED USERS LIST
