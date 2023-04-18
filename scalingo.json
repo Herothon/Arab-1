@@ -1,4 +1,4 @@
-{"name": "سورس تليثون الجمهورية سكالينجو","description": "تنصيب سورس تليثون  الجمهورية مجانا على منصة سكالينجو","addons": ["scalingo-postgresql"],"keywords": ["userbot","scalingo","iqyhon"],"repository": "https://github.com/Heathon/iqhelp","stack": "container",
+{"name": "سورس تليثون الجمهورية سكالينجو","description": "تنصيب سورس تليثون  الجمهورية مجانا على منصة سكالينجو","addons": ["scalingo-postgresql"],"keywords": ["userbot","scalingo","iqyhon"],"repository": "https://github.com/HeaThon/HeaThon","stack": "container",
     "env": {
         "ALIVE_NAME": {"description": "ضع هنا اسم حسابك على التليجرام","required": true,"value":""},
         "APP_ID": {"description": "ضع هنا الايبي ايدي","required": true,"value":""},
