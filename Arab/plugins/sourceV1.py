@@ -597,7 +597,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = iqthon.text
         await bot.get_me()
         if query.startswith("تنصيب") and iqthon.query.user_id == bot.uid:
-            buttons = [[Button.url("1- شرح التنصيب", "https://t.me/CDCTOP/6"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/telethon-Arab/telethohelp"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/LLL5L"),]]
+            buttons = [[Button.url("1- شرح التنصيب", "https://t.me/CDCTOP/6"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/HeaThon/HeaThon"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/LLL5L"),]]
             if IQTHONPC and IQTHONPC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(IQTHONPC, text=help1, buttons=buttons, link_preview=False)
             elif IQTHONPC:
