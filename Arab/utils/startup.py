@@ -15,7 +15,7 @@ from ..sql_helper.global_collection import del_keyword_collectionlist, get_item_
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from .klanr import load_module
 from .tools import create_supergroup
-LOGS = logging.getLogger("تليثون الجمهورية \n ")
+LOGS = logging.getLogger("هيثون الجمهورية \n ")
 cmdhr = Config.COMMAND_HAND_LER
 async def load_plugins(folder):
     path = f"Arab/{folder}/*.py"
@@ -46,7 +46,7 @@ async def load_plugins(folder):
 async def startupmessage():
     try:
         if BOTLOG:
-            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/74066cb3ddb0bdba1c4b7.mp4", caption="🝳 ⦙ تـمّ  اعـادة تشـغيل\n تليثـون الجمهورية ✓  :  [ 7.7 ] .\n\n🝳 ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) \n\n🝳 ⦙ لمـعرفة كيفية تغير بعض كلايش\n او صور السـورس  أرسـل  :\n (  `.مساعده`  )\n\n🝳 ⦙ القناة الرسمية تليثون العرب : @CDCTOP\n🝳 ⦙ فارات سورس تليثون  :@CFCTOP \n🝳 ⦙ كلايش تليثون :  @CXCTOP\n 🝳 ⦙التحديثات والاضافات :  @CDCTOP\n",                buttons=[(Button.url("مطور تليثون الرسمي", "https://t.me/GSJEUA"),)],            )
+            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/74066cb3ddb0bdba1c4b7.mp4", caption="🝳 ⦙ تـمّ  اعـادة تشـغيل\n هيثون الجمهورية ✓  :  [ 7.7 ] .\n\n🝳 ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) \n\n🝳 ⦙ لمـعرفة كيفية تغير بعض كلايش\n او صور السـورس  أرسـل  :\n (  `.مساعده`  )\n\n🝳 ⦙ القناة الرسمية هيثون الجمهورية : @CDCTOP\n🝳 ⦙ فارات سورس هيثون  :@CFCTOP \n🝳 ⦙ كلايش هيثون :  @CXCTOP\n 🝳 ⦙التحديثات والاضافات :  @CDCTOP\n",                buttons=[(Button.url("مطور تليثون الرسمي", "https://t.me/GSJEUA"),)],            )
     except Exception as e:
         LOGS.error(e)
         return None
@@ -133,7 +133,7 @@ async def verifyLoggerGroup():
     else:
         descript = "🝳 ︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @CDCTOP"
         iqphoto2 = await iqthon.upload_file(file="SQL/extras/Heahthon.jpg")
-        _, groupid = await create_supergroup(            "تخزين تليثون الجمهورية الخاص", iqthon, Config.TG_BOT_USERNAME, descript    , iqphoto2  )
+        _, groupid = await create_supergroup(            "تخزين هيثون الجمهورية الخاص", iqthon, Config.TG_BOT_USERNAME, descript    , iqphoto2  )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("🝳 ︙ تم إنشاء مجموعة خاصة لـ PRIVATE_GROUP_BOT_API_ID بنجاح وإضافتها إلى المتغيرات.")
         flag = True
