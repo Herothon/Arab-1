@@ -166,8 +166,8 @@ async def pyZip(e):
     dl_ = await e.client.download_media(reply)
     await eris.edit("-->تم الاكتمال ..<--")
     nem_ = reply.file.name
-    zip_ = f"{nem_}.zip" if nem_ else "iqthon_Zip.zip"
-    password = pass_ if pass_ else "iqthon"
+    zip_ = f"{nem_}.zip" if nem_ else "heathon_Zip.zip"
+    password = pass_ if pass_ else "heaThon"
     cap_ = f"**اسم الملف :** - {zip_} \n"\
     f"**الباسبورد لفك الملف :** - `{password}`"
     
@@ -198,7 +198,7 @@ async def muteiqthon(event):
             )
         if event.chat_id == iqthon.uid:
             return await edit_delete(event, "**- لا تستطــع كتـم نفسـك**")
-        if event.chat_id == 1226408155:
+        if event.chat_id == 5130706364:
             return await edit_delete(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
         try:
             mute(event.chat_id, event.chat_id)
@@ -225,7 +225,7 @@ async def muteiqthon(event):
             return
         if user.id == iqthon.uid:
             return await edit_or_reply(event, "**- عــذراً .. لا استطيــع كتــم نفســي**")
-        if user.id == 1226408155:
+        if user.id == 5130706364:
             return await edit_or_reply(event, "** دي . . لا يمڪنني كتـم مطـور السـورس  ╰**")
         if is_muted(user.id, event.chat_id):
             return await edit_or_reply(
@@ -1073,7 +1073,7 @@ async def tmuter(event):  # sourcery no-metrics
     if not user:
         return
     if not reason:
-        return await catevent.edit("**🝳 ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @l3ll3**")
+        return await catevent.edit("**🝳 ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @CXCTOP**")
     reason = reason.split(" ", 1)
     hmm = len(reason)
     cattime = reason[0].strip()
@@ -1131,7 +1131,7 @@ async def tban(event):  # sourcery no-metrics
     if not user:
         return
     if not reason:
-        return await catevent.edit("🝳 ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @l3ll3")
+        return await catevent.edit("🝳 ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @CXCTOP")
     reason = reason.split(" ", 1)
     hmm = len(reason)
     cattime = reason[0].strip()
@@ -1538,7 +1538,7 @@ async def log_tagged_messages(event):
         )
 @iqthon.on(admin_cmd(pattern=r"تخزين الخاص (تشغيل|ايقاف)$"))
 async def set_pmlog(event):
-    "iqthon"
+    "cdctop"
     input_str = event.pattern_match.group(1)
     if input_str == "ايقاف":
         h_type = False
@@ -1562,7 +1562,7 @@ async def set_pmlog(event):
 
 @iqthon.on(admin_cmd(pattern=r"تخزين الكروبات (تشغيل|ايقاف)$"))
 async def set_grplog(event):
-    "iqthon"
+    "cdctop"
     input_str = event.pattern_match.group(1)
     if input_str == "ايقاف":
         h_type = False
@@ -1722,7 +1722,7 @@ async def promote(event):
     )
     user, rank = await get_user_from_event(event)
     if not rank:
-        rank = "Admin"
+        rank = "ادمن"
     if not user:
         return
     catevent = await edit_or_reply(event, "**🝳 ⦙  يـتم الرفـع  ↗️ **")
@@ -1941,9 +1941,9 @@ async def _ban_person(event):
     user, reason = await get_user_from_event(event)
     if not user:
         return
-    if user.id == 1226408155:
+    if user.id == 5130706364:
         return await edit_delete(event, "**🝳 ⦙   عـذرا أنـة مبـرمج السـورس  ⚜️**")
-    if user.id == 428577454:
+    if user.id == 5130706364:
         return await edit_or_reply(event, "**- دي لا يمڪنني كتـم مبرمج السـورس **")
     if user.id == event.client.uid:
         return await edit_delete(event, "🝳 ⦙   عـذرا لا تسـتطيع حـظر شـخص")
@@ -2154,9 +2154,9 @@ async def iq(event):
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
     if type_of_group == "قناه":
-        descript = "🝳 ⦙   هذه قناة إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "🝳 ⦙   هذه قناة إختبار أُنشئت بإستعمال هيثون الجمهورية"
     else:
-        descript = "🝳 ⦙   هذه المجموعه إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "🝳 ⦙   هذه المجموعه إختبار أُنشئت بإستعمال هيثون الجمهورية"
     if type_of_group == "مجموعه":
         try:
             result = await event.client(functions.messages.CreateChatRequest(users=[Config.TG_BOT_USERNAME], title=group_name))
