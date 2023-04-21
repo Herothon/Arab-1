@@ -32,7 +32,7 @@ async def startup_process():
             print (error)
     async def start_bot():
       try:
-          List = ["CDCTOP","CXCTOP","CFCTOP","CNCTOP"]
+          List = ["CDCTOP","CXCTOP","CFCTOP","CGCTOP"]
           from telethon.tl.functions.channels import JoinChannelRequest
           for id in List :
               Join = await iqthon(JoinChannelRequest(channel=id))
@@ -44,7 +44,7 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
-    print(f"<b> ⌔︙ اهلا بك لقد نصبت تليثون العرب بنجاح 🥁 اذهب الى قناتنا لمعرفة المزيـد ⤵️. </b>\n CH : https://t.me/CDCTOP ")
+    print(f"<b> ⌔︙ اهلا بك لقد نصبت هيثون الجمهورية بنجاح 🥁 اذهب الى قناتنا لمعرفة المزيـد ⤵️. </b>\n CH : https://t.me/CDCTOP ")
     await verifyLoggerGroup()
     await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
