@@ -2629,7 +2629,7 @@ async def permalink(mention):
     if user.id == 5130706364:
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     if user.id == 5130706364:
-        return await 5130706364(mention, f"**- هذا مبرمج السورس  **")
+        return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqth2 = user.last_name.replace("\u2060", "") if user.last_name else user.username
     await edit_or_reply(mention, f"────▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀█─█\n▀▀▀▀▄─█─█─█─█─█─█──█▀█\n─────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▀\n\n**🚹 ¦ تنح خل اجكك عزيزي ** [{iqth}{iqth2}](tg://user?id={user.id})")
