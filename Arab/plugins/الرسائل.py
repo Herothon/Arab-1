@@ -918,7 +918,7 @@ async def iq(event):
     return await event.edit('**يجـب عـليك الـرد عـلى صـورة ذاتيـة الـتدمير**')
   ogtah = await event.get_reply_message()
   pic = await ogtah.download_media()
-  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @iqthon""")
+  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @CDCTOP""")
   await event.delete()
 @iqthon.on(admin_cmd(pattern="تاريخ الرساله(?: |$)(.*)"))    
 async def _(event):
@@ -1318,7 +1318,7 @@ async def sticklet(event):
     image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
     fontsize = 230
-    FONT_FILE = await get_font_file(event.client, "@catfonts", font_file_name)
+    FONT_FILE = await get_font_file(event.client, "@CDCTOP", font_file_name)
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
     while draw.multiline_textsize(sticktext, font=font) > (512, 512):
         fontsize -= 3
