@@ -6,12 +6,12 @@ from .Config import Config
 from .core.logger import logging
 from .core.session import iqthon
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
-LOGS = logging.getLogger("تليثون الجمهورية")
+LOGS = logging.getLogger("هيثون الجمهورية")
 print(Arab.__copyright__)
 print("المرخصة بموجب شروط " + Arab.__license__)
 cmdhr = Config.COMMAND_HAND_LER
 try:
-    LOGS.info("بدء تنزيل تليثون الجمهورية")
+    السجلات . info ( "انطلاق هيثون الجمهورية"هيث )
     iqthon.loop.run_until_complete(setup_bot())
     LOGS.info("بدء تشغيل البوت")
 except Exception as e:
