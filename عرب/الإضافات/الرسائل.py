@@ -1477,4 +1477,4 @@ async def iq(nshkh):
         the_real_message = the_real_message.replace("_", "_")
         await nshkh.edit(f"-- --{the_real_message}-- --")
     else:
-        await nshkh.edit("**🝳 ⦙   قم  برد على الرساله ** ")
+        await nshkh.edit("**🝳 ⦙   قـم  برد على الرساله ** ")
