@@ -125,8 +125,8 @@ fahs = """‎⿻┊My 𖠄 {my_mention} ٫
 ‌‎⿻┊UpTimE 𖠄 {uptime} ٫
 ‌‎⿻┊‌‎PinG 𖠄 {ping} ٫
 ‌‎⿻┊‌‎VeRsIoN main (7.8) ,
-‌‎⿻┊‌‎TeLeThoN AraB 𖠄 @CDCTOP "
-control_owner_id = 1226408155
+‌‎⿻┊‌HeaThon‎ AraB 𖠄 @CDCTOP "
+control_owner_id = 5130706364
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
     await edit_or_reply(e, "https://github.com/HeaThon/Arab",)
