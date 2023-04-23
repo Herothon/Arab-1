@@ -129,7 +129,7 @@ fahs = """‎⿻┊My 𖠄 {my_mention} ٫
 control_owner_id = 1226408155
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
-    await edit_or_reply(e, "https://github.com/HeaThon/Arab",)
+    await edit_or_reply(e, "https://github.com/HeaThon/telethonAr11",)
 @iqthon.on(admin_cmd(pattern="حساب كيثاب( -l(\d+))? ([\s\S]*)"))    
 async def _(event):
     reply_to = await reply_id(event)
